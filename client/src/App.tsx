@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import BarLoader from 'react-spinners/BarLoader'
+import 'weather-icons/css/weather-icons.css'
 import './App.scss'
-import logo from './logo.svg'
+import WeatherDashboard from './components/WeatherDashboard'
+import { spinnerStyle } from './styles/cssInJsConstants'
 import { getWeatherInfo } from './utilities/apiCalls'
 
 interface AppState {
@@ -59,24 +62,12 @@ class App extends Component<{}, AppState> {
   }
 
   render() {
-    return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    )
+    const { isLoaded, data } = this.state
+    if (isLoaded) {
+      return <WeatherDashboard />
+    } else {
+      return <BarLoader css={spinnerStyle} />
+    }
   }
 }
 

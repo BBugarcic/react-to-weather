@@ -1,26 +1,70 @@
 // variables
 $primary-color: red;
+$column-width: 50%;
+$column-height: 600px;
 
-// general app style
-.App {
-  text-align: center;
+// app style
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
+#root {
+  height: 100%;
 }
 
-.App-header {
-  background-color: $primary-color;
-  min-height: 100vh;
+.dashboard {
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoPanel {
+  height: $column-height;
+  width: $column-width;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  .info {
+    width: 350px;
+    background-color: lightgreen;
+  }
+}
+
+.navPanels {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: $column-width;
+  height: $column-height;
+  text-transform: capitalize;
+  .selectedCity {
+    padding: 20px;
+  }
 }
 
-.App-link {
-  color: #09d3ac;
+.navPanel {
+  margin: 0;
+  padding: 10px 20px;
+  border-left: solid 1px #cccccc73;
+  color: #cccccc73;
+  font-weight: 300;
+  cursor: pointer;
+  &.selected {
+    color: rgb(123, 123, 123);
+    border-left: solid 1px rgb(123, 123, 123);
+  }
+}
+
+.wi {
+  font-size: 48px;
+  color: red;
 }
