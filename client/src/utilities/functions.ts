@@ -6,6 +6,6 @@ export const getString = (prop: string | number): string => {
   return typeof prop === 'string' ? prop : ''
 }
 
-export const getNumber = (prop: string | number): number => {
-  return typeof prop === 'number' ? prop : 0
+export const getNumber = (prop: string | number): number | null => {
+  return typeof prop === 'number' ? prop : null
 }

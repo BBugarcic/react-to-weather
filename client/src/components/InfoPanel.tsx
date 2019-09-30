@@ -6,11 +6,13 @@ export interface InfoPanelProps {
   icon: string
   city: string
   summary: string
-  temperature: number
+  temperature: number | null
 }
 const InfoPanel: React.FC<InfoPanelProps> = props => {
   const { icon, temperature, summary, city } = props
-  const roundedTemp = Math.round(temperature * 10) / 10
+  const roundedTemp: number | null = temperature
+    ? Math.round(temperature * 10) / 10
+    : null
 
   const allClassNames = c(
     'info',

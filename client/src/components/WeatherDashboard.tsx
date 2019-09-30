@@ -10,7 +10,7 @@ export interface WeatherDashboardProps {
   icon: string
   city: string
   summary: string
-  temperature: number
+  temperature: number | null
 }
 
 const WeatherDashboard: React.FC<WeatherDashboardProps> = props => {
