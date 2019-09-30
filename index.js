@@ -15,7 +15,7 @@ const CITIES = {
     lat: 48.864716,
     long: 2.349014,
   },
-  newYork: {
+  new_york_city: {
     lat: 40.73061,
     long: -73.935242,
   },
@@ -40,7 +40,7 @@ app.get('/currentWeather', (req, res) => {
   axios
     .get(
       // [url]/[key]/[latitude],[longitude][params]
-      `${env.parsed.DARK_SKY_URL}${env.parsed.API_KEY}/${lat},${long}?exclude=${excludedStat}`
+      `${env.parsed.DARK_SKY_URL}${env.parsed.API_KEY}/${lat},${long}?exclude=${excludedStat}&units=si`
     )
     .then(response => {
       res.send(response.data)
