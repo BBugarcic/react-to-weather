@@ -1,0 +1,47 @@
+@import 'variables.scss';
+
+.infoPanel {
+  height: $column-height;
+  width: $column-width;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  .info {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .temperature {
+      font-size: 2em;
+      font-weight: 700;
+    }
+    &.london {
+      background-color: $london-background-color;
+    }
+    &.paris {
+      background-color: $paris-background-color;
+    }
+    &.new-york-city {
+      background-color: $new-york-background-color;
+    }
+    &.singapore {
+      background-color: $singapore-background-color;
+    }
+    &.sydney {
+      background-color: $sydney-background-color;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .infoPanel {
+    justify-content: center;
+    padding-right: 0;
+    margin-bottom: $base-spacing;
+    width: 80%;
+    .info {
+      padding: $base-spacing;
+    }
+  }
+}

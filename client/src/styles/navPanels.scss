@@ -1,0 +1,46 @@
+@import 'variables.scss';
+
+.navPanels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: $column-width;
+  height: $column-height;
+  text-transform: capitalize;
+}
+
+.navPanel {
+  margin: 0;
+  padding: 10px $base-spacing;
+  border-left: $solid-border $border-color;
+  color: $border-color;
+  font-weight: 300;
+  cursor: pointer;
+  &.selected {
+    color: $selected-city-color;
+    border-left: $solid-border $selected-city-color;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navPanels {
+    flex-direction: column-reverse;
+    height: auto;
+    padding-top: $base-spacing;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .navPanel {
+    padding: 10px 5px;
+    display: inline;
+    border-left: none;
+    border-bottom: $solid-border $border-color;
+    &.selected {
+      border-left: none;
+      border-bottom: $solid-border $selected-city-color;
+    }
+  }
+}

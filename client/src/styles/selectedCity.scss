@@ -1,0 +1,10 @@
+@import 'variables.scss';
+
+.selectedCity {
+  padding: $base-spacing;
+}
+@media (max-width: 1024px) {
+  .selectedCity {
+    padding: 0;
+  }
+}

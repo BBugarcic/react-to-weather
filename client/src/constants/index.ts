@@ -1,1 +1,7 @@
-export const CITIES = ['london', 'paris', 'new-york', 'singapore', 'sydney']
+export const CITIES = [
+  'london',
+  'paris',
+  'new_york_city',
+  'singapore',
+  'sydney',
+]

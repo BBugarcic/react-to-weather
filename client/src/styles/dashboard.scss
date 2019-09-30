@@ -1,0 +1,17 @@
+.dashboard {
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+  }
+}

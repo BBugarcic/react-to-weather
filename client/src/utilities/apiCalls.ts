@@ -4,9 +4,10 @@ import { CurrentWeather } from '../App'
 export const getWeatherInfo = async (
   city: string = 'london'
 ): Promise<CurrentWeather> => {
-  const response: AxiosResponse<CurrentWeather> = await axios.get(
+  let response: AxiosResponse<CurrentWeather> = await axios.get(
     '/currentWeather',
     { params: city }
   )
+  response.data.city = city
   return response.data
 }
