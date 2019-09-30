@@ -1,10 +1,17 @@
 import { default as c } from 'classnames'
-import React, { useState } from 'react'
+import React from 'react'
 import { CITIES } from '../constants'
+import '../styles/navPanels.scss'
+import { getCityName } from '../utilities/functions'
 import SelectedCity from './SelectedCity'
 
-const NavPanels: React.FC = () => {
-  const [selectedCity, setSelectedCity] = useState('london')
+export interface NavPanelsProps {
+  handleChange(selectedCity: string): void
+  selectedCity: string
+}
+
+const NavPanels: React.FC<NavPanelsProps> = props => {
+  const { handleChange, selectedCity } = props
 
   return (
     <div className={c('navPanels')}>
@@ -16,9 +23,11 @@ const NavPanels: React.FC = () => {
               <h3
                 key={`${index}-${city}`}
                 className={c('navPanel', { selected: selectedCity === city })}
-                onClick={() => setSelectedCity(city)}
+                onClick={() => {
+                  handleChange(city)
+                }}
               >
-                {city}
+                {getCityName(city)}
               </h3>
             )
           }
