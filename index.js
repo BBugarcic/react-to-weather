@@ -40,7 +40,8 @@ app.get('/currentWeather', (req, res) => {
   axios
     .get(
       // [url]/[key]/[latitude],[longitude][params]
-      `${env.parsed.DARK_SKY_URL}${env.parsed.API_KEY}/${lat},${long}?exclude=${excludedStat}&units=si`
+      // `${env.parsed.DARK_SKY_URL}${env.parsed.API_KEY}/${lat},${long}?exclude=${excludedStat}&units=si`
+      `https://api.darksky.net/forecast/e5ee452f0af721af1d7cf02445ffa1be/${lat},${long}?exclude=${excludedStat}&units=si`
     )
     .then(response => {
       res.send(response.data)
