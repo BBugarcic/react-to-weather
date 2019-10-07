@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders <WeatherDashboard /> when api response is success 1`] = `ReactWrapper {}`;
+
+exports[`<App /> renders error message when api returns error 1`] = `ReactWrapper {}`;

@@ -1,0 +1,65 @@
+{
+  "short_name": "React To Weather",
+  "name": "React To Weather with Express Backend",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "clear-day.png",
+      "sizes": "128x128",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "clear-night.png",
+      "sizes": "128x128",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "cloudy.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "fog.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "partly-cloudy-day.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "partly-cloudy-night.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "rain.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "sleet.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "snow.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "wind.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
